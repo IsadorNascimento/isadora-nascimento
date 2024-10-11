@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagrama Cliente-Servidor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+        .container {
+            position: relative;
+            width: 600px;
+            height: 300px;
+        }
+        .client, .server {
+            width: 150px;
+            height: 100px;
+            background-color: #2980b9;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .client {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+        .server {
+            position: absolute;
+            top: 50px;
+            right: 50px;
+        }
+        .arrow {
+            position: absolute;
+            width: 2px;
+            height: 60px;
+            background-color: #333;
+            left: 130px; /* Largura do client */
+            top: 90px; /* Meio do client */
+        }
+        .arrow:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid #333;
+            top: 60px; /* Posição da seta */
+            left: -10px; /* Ajusta a seta */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="client">Cliente</div>
+        <div class="arrow"></div>
+        <div class="server">Servidor</div>
+    </div>
+</body>
+</html>
