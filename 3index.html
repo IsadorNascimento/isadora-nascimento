@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP vs HTTPS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 30px;
+        }
+        .box {
+            width: 250px;
+            height: 150px;
+            border-radius: 8px;
+            color: white;
+            text-align: center;
+            line-height: 150px;
+            font-size: 1.2em;
+            position: relative;
+            overflow: hidden;
+        }
+        .http {
+            background-color: #e74c3c; /* Vermelho para HTTP */
+        }
+        .https {
+            background-color: #2ecc71; /* Verde para HTTPS */
+        }
+        .animation {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(255, 255, 255, 0.2);
+            animation: wave 2s infinite;
+            opacity: 0;
+        }
+        .http .animation {
+            animation: wave 2s infinite;
+        }
+        .https .animation {
+            animation: none;
+        }
+        @keyframes wave {
+            0% { opacity: 0.2; }
+            50% { opacity: 0.5; }
+            100% { opacity: 0.2; }
+        }
+        .info {
+            text-align: center;
+            margin-top: 20px;
+        }
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <h1>Diferença entre HTTP e HTTPS</h1>
+    <div class="container">
+        <div class="box http">
+            HTTP
+            <div class="animation"></div>
+        </div>
+        <div class="box https">
+            HTTPS
+            <div class="animation"></div>
+        </div>
+    </div>
+    <div class="info">
+        <p><strong>HTTP (Hypertext Transfer Protocol):</strong> Um protocolo de comunicação na web que não é seguro. Os dados são transmitidos em texto simples, o que pode ser interceptado.</p>
+        <p><strong>HTTPS (Hypertext Transfer Protocol Secure):</strong> Uma versão segura do HTTP que utiliza criptografia para proteger a comunicação entre o cliente e o servidor.</p>
+    </div>
+    <footer>
+        <p>Fonte: Wikipedia</p>
+    </footer>
+</body>
+</html>
